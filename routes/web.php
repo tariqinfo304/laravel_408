@@ -70,3 +70,19 @@ Route::get("class/{name}",function($name){
 
 ///go/PHP => /class/PHP
 Route::redirect('/go/PHP', '/class/PHP');
+
+
+
+////////////////
+// Controller
+///////////////
+
+
+Route::get("first/{id}",[App\Http\Controllers\HelloController::class,"hello"]);
+Route::get("student/{name?}",[App\Http\Controllers\StudentController::class,"index"]);
+
+
+////////////////
+/// View/ //
+//////////////
+Route::get("view",[App\Http\Controllers\ViewController::class,"index"]);
