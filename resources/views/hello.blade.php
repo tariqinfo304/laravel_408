@@ -9,6 +9,19 @@
 	<h1>{{ $name }}</h1>
 
 
+	@includeIf("student_list",["list" => $std_list])
+
+	<hr/>
+
+	@includeWhen(false,"student_list",["list" => $std_list])
+
+
+	<hr/>
+
+	@includeFirst(["student_list","student.list"],["list" => $std_list])
+
+	<hr/>
+	<h1>EAch fnction of Blade</h1>
 	<table border="2">
 		<thead>
 			<tr>
@@ -17,14 +30,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			@foreach($std_list as $row)
-
-				<tr>
-					<td>{{ $row["id"] }}</td>
-					<td>{{ $row["name"] }}</td>
-				</tr>
-
-			@endforeach
+			@each("rowView",$std_list,"obj","emptyView")
 		</tbody>
 	</table>
 
@@ -60,6 +66,10 @@
 	@endfor
 	</ul>
 
+
+	<hr/>
+
+	<x-student></x-student>
 
 
 </body>

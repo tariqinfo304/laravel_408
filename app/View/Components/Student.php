@@ -1,15 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\View\Components;
 
-use Illuminate\Http\Request;
+use Illuminate\View\Component;
 
-class ViewController extends Controller
+class Student extends Component
 {
-    function index()
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        $name1 = "Student List Table";
-        $title="Hello";
+        //
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render()
+    {
 
         $list = [
 
@@ -39,18 +52,6 @@ class ViewController extends Controller
             ]
 
         ];
-
-        return view("hello",
-            [
-                "name"  => $name1,
-                "title" => $title,
-                "std_list" => []
-            ]);
-    }
-
-
-    function template()
-    {
-        return view("child");
+        return view('components.student',["list" => $list]);
     }
 }

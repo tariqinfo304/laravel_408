@@ -86,3 +86,7 @@ Route::get("student/{name?}",[App\Http\Controllers\StudentController::class,"ind
 /// View/ //
 //////////////
 Route::get("view",[App\Http\Controllers\ViewController::class,"index"]);
+
+//Template
+
+Route::get("template",[App\Http\Controllers\ViewController::class,"template"]);
