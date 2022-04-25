@@ -90,3 +90,8 @@ Route::get("view",[App\Http\Controllers\ViewController::class,"index"]);
 //Template
 
 Route::get("template",[App\Http\Controllers\ViewController::class,"template"]);
+
+
+//ORM
+
+Route::get("orm",[App\Http\Controllers\ORMController::class,"index"]);
