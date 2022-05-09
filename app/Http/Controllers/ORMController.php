@@ -11,8 +11,7 @@ class ORMController extends Controller
 {
     
     function index()
-    {
-        
+    {   
         /*
         $std = new Student();
         //create

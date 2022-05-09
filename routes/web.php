@@ -79,7 +79,8 @@ Route::redirect('/go/PHP', '/class/PHP');
 
 
 Route::get("first/{id}",[App\Http\Controllers\HelloController::class,"hello"]);
-Route::get("student/{name?}",[App\Http\Controllers\StudentController::class,"index"]);
+
+//Route::get("student/{name?}",[App\Http\Controllers\StudentController::class,"index"]);
 
 
 ////////////////
@@ -95,3 +96,9 @@ Route::get("template",[App\Http\Controllers\ViewController::class,"template"]);
 //ORM
 
 Route::get("orm",[App\Http\Controllers\ORMController::class,"index"]);
+
+
+//Resource conrtoller with resource route
+Route::resource("student",App\Http\Controllers\StdController::class);
+
+
