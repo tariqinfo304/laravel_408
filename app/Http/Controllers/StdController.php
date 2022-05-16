@@ -35,6 +35,13 @@ class StdController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            "name" => "required|String",
+            "age"  => "required|Integer",
+            "cnic" => "required",
+            "roll_no" => "required|unique:student"
+        ]);
         //dd($request->all());
         $std = new Student();
         $std->name = $request->name;

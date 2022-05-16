@@ -14,6 +14,16 @@
 </head>
 <body>
 
+	@if ($errors->any())
+	    <div class="alert alert-danger">
+	        <ul>
+	            @foreach ($errors->all() as $error)
+	                <li>{{ $error }}</li>
+	            @endforeach
+	        </ul>
+	    </div>
+	@endif
+
 	<form method="POST" 
 
 
@@ -44,24 +54,43 @@
 
 		@if(!empty($obj))
 		value = "{{ $obj->name }}"
+		@else
+		value="{{old('name')}}"
 		@endif
 
 		/>
+		@error("name")
+			<p>{{ $message }}</p>
+		@enderror
 		<hr/>
 		<label>Age</label>
 		<input type="text" name="age"
 
 		@if(!empty($obj))
 		value = "{{ $obj->age }}"
+		@else
+		value="{{old('age')}}"
 		@endif
 
+
+		@error("age")
+
+		style="border-color:red"
+
+		@enderror
+
 		/>
+		@error("age")
+			<p>{{ $message }}</p>
+		@enderror
 		<hr/>
 		<label>CNIC</label>
 		<input type="text" name="cnic"
 
 		@if(!empty($obj))
 		value = "{{ $obj->cnic }}"
+		@else
+		value="{{old('cnic')}}"
 		@endif
 
 		/>
@@ -71,6 +100,8 @@
 
 		@if(!empty($obj))
 		value = "{{ $obj->height }}"
+		@else
+		value="{{old('height')}}"
 		@endif
 		/>
 		<hr/>
@@ -79,6 +110,8 @@
 
 		@if(!empty($obj))
 		value = "{{ $obj->roll_no }}"
+		@else
+		value="{{old('roll_no')}}"
 		@endif
 		/>
 		<hr/>

@@ -49,8 +49,6 @@ Route::get("work1/{id?}",function($id=NULL){
 });
 
 
-
-
 //Route Parameter validation 
 
 //http://127.0.0.1:8000/evs/12323 ( work )
@@ -99,6 +97,7 @@ Route::get("orm",[App\Http\Controllers\ORMController::class,"index"]);
 
 
 //Resource conrtoller with resource route
-Route::resource("student",App\Http\Controllers\StdController::class);
+Route::resource("student",App\Http\Controllers\StdController::class)
+    ->middleware(["test_route"]);
 
 
