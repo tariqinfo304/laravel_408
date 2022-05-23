@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class WebController extends Controller
 {
@@ -13,7 +14,9 @@ class WebController extends Controller
 
     function shop()
     {
-        return view("web.shop");
+
+        $list = Product::all();
+        return view("web.shop")->with("list",$list);
     }
 
      function cart()

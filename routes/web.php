@@ -109,8 +109,8 @@ Route::get("/shop",[App\Http\Controllers\WebController::class,"shop"]);
 Route::get("/shop_detail",[App\Http\Controllers\WebController::class,"shop_detail"]);
 Route::get("/contact",[App\Http\Controllers\WebController::class,"contact"]);
 Route::get("/checkout",[App\Http\Controllers\WebController::class,"checkout"]);
-Route::get("/product",[App\Http\Controllers\WebController::class,"product"]);
+//Route::get("/product",[App\Http\Controllers\WebController::class,"product"]);
 Route::get("/cart",[App\Http\Controllers\WebController::class,"cart"]);
 
-
+Route::resource("product",App\Http\Controllers\ProductController::class);
 
