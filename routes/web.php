@@ -106,7 +106,7 @@ Route::resource("student",App\Http\Controllers\StdController::class)
 
 Route::get("/web",[App\Http\Controllers\WebController::class,"index"]);
 Route::get("/shop",[App\Http\Controllers\WebController::class,"shop"]);
-Route::get("/shop_detail",[App\Http\Controllers\WebController::class,"shop_detail"]);
+Route::get("/shop_detail/{id}",[App\Http\Controllers\WebController::class,"shop_detail"]);
 Route::get("/contact",[App\Http\Controllers\WebController::class,"contact"]);
 Route::get("/checkout",[App\Http\Controllers\WebController::class,"checkout"]);
 //Route::get("/product",[App\Http\Controllers\WebController::class,"product"]);

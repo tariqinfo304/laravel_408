@@ -9,7 +9,6 @@
                     <li><a href="{{ URL('cart') }}">Shoping Cart</a></li>
                     <li><a href="{{ URL('checkout') }}">Check Out</a></li>
                     <li><a href="./blog-details.php">Blog Details</a></li>
-                    <li><a href="./add_product.php">Add Product</a></li>
                     <li><a href="{{ URL('product') }}">Product</a></li>
                 </ul>
             </li>

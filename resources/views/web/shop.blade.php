@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-7">
-                    <div class="product__discount">
+                    <!-- <div class="product__discount">
                         <div class="section-title product__discount__title">
                             <h2>Sale Off</h2>
                         </div>
@@ -317,7 +317,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="filter__item">
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
@@ -356,7 +356,7 @@
                                         </ul>
                                     </div>
                                     <div class="product__item__text">
-                                        <h6><a href="#">{{ $row->name }}</a></h6>
+                                        <h6><a href="{{ URL('shop_detail',$row->id) }}">{{ $row->name }}</a></h6>
                                         <h5>${{ $row->price }}</h5>
                                     </div>
                                 </div>

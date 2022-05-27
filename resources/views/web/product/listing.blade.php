@@ -37,8 +37,8 @@
                 <h4> Product Listing <a style="float: right;" href="{{ URL('product/create') }}"><button class="btn btn-primary"><i class="fa fa-plus"></i> &nbsp;Add Product</button><a/></h4>
 
                 <div class="row">
-                  <!--   {{ $list->links() }} -->
-
+                    {{ $list->links() }}
+                    <br/>
                 </div>
                 
                 <div class="row">

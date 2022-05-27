@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\ProductImages;
 
 class WebController extends Controller
 {
@@ -23,9 +24,16 @@ class WebController extends Controller
     {
         return view("web.cart");
     }
-     function shop_detail()
+    function shop_detail($id)
     {
-        return view("web.shop_detail");
+        $product = Product::find($id);
+        $images = ProductImages::where("product_id",$product->id)->get();
+        return view("web.shop_detail",
+                    [
+                        "product" => $product,
+                        "images" => $images
+                    ]
+            );
     }
      function checkout()
     {
