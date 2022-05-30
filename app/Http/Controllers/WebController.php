@@ -10,6 +10,7 @@ class WebController extends Controller
 {
     function index()
     {
+        //dd(session()->all());
         return view("web.home");
     }
 

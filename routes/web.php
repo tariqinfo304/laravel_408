@@ -112,5 +112,17 @@ Route::get("/checkout",[App\Http\Controllers\WebController::class,"checkout"]);
 //Route::get("/product",[App\Http\Controllers\WebController::class,"product"]);
 Route::get("/cart",[App\Http\Controllers\WebController::class,"cart"]);
 
-Route::resource("product",App\Http\Controllers\ProductController::class);
+Route::resource("product",App\Http\Controllers\ProductController::class)
+                ->middleware("sessionCheck");
+
+
+Route::get("login",[App\Http\Controllers\UserController::class,"index"]);
+Route::post("login",[App\Http\Controllers\UserController::class,"login"]);
+
+
+Route::get("add_user",[App\Http\Controllers\UserController::class,"user_form"]);
+Route::post("add_user",[App\Http\Controllers\UserController::class,"add_user"]);
+
+
+Route::get("logout",[App\Http\Controllers\UserController::class,"logout"]);
 

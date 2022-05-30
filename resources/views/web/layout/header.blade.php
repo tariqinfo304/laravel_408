@@ -29,7 +29,14 @@
                             </ul>
                         </div>
                         <div class="header__top__right__auth">
-                            <a href="#"><i class="fa fa-user"></i> Login</a>
+                            @if(!empty(session("username")))
+                                    <p>Welcome to {{ session('name') }}</p>
+                                <a href="{{URL('logout')}}"><i class="fa fa-user"></i> Logout</a>
+                            @else
+                                <a href="{{URL('login')}}"><i class="fa fa-user"></i> Login</a>
+                                <a href="{{ URL('add_user') }}"><i class="fa fa-user"></i> Register</a>
+                            @endif
+                            
                         </div>
                     </div>
                 </div>
