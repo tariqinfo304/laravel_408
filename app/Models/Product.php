@@ -11,14 +11,15 @@ class Product extends Model
 
     protected $table="product";
 
+
     function images()
     {
         return $this->hasMany(ProductImages::class,"product_id","id");
     }
 
 
-    function fav()
+    function info()
     {
-        return $this->hasMany(FavModel::class,"product_id","id");
+        return $this->hasOne(ProductInfo::class,"product_id","id");
     }
 }

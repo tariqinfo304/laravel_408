@@ -126,3 +126,9 @@ Route::post("add_user",[App\Http\Controllers\UserController::class,"add_user"]);
 
 Route::get("logout",[App\Http\Controllers\UserController::class,"logout"]);
 
+
+
+Route::get("one_to_many",[App\Http\Controllers\ORMController::class,"one_to_many"]);
+
+Route::get("one_to_one",[App\Http\Controllers\ORMController::class,"one_to_one"]);
+

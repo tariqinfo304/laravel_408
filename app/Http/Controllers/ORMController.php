@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Models\Product;
 
 use DB;
 
@@ -119,6 +120,18 @@ class ORMController extends Controller
 
         DB::table("student")->where("id",6)->delete();
         */
+    }
 
+
+    function one_to_many()
+    {
+        $p  = Product::find("4");
+        dd($p->images);
+    }
+
+    function one_to_one()
+    {
+        $p  = Product::find("4");
+        dd($p->info);
     }
 }

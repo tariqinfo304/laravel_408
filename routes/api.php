@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+
+Route::get("users",[App\Http\Controllers\API::class,"user_list"]);
+
+Route::get("users_list",[App\Http\Controllers\API::class,"list"]);
+
+Route::get("user_save",[App\Http\Controllers\API::class,"user_save"]);
