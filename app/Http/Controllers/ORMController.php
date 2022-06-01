@@ -8,6 +8,9 @@ use App\Models\Product;
 
 use DB;
 
+use App\Models\Post;
+use App\Models\Friend;
+
 class ORMController extends Controller
 {
     
@@ -133,5 +136,19 @@ class ORMController extends Controller
     {
         $p  = Product::find("4");
         dd($p->info);
+    }
+
+    function many_to_many()
+    {
+
+        /*
+        $post = Post::find("1");
+        dd($post->friend_list);
+        */
+
+
+        $friend= Friend::find(3);
+
+        dd($friend->post_list);
     }
 }

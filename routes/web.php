@@ -132,3 +132,6 @@ Route::get("one_to_many",[App\Http\Controllers\ORMController::class,"one_to_many
 
 Route::get("one_to_one",[App\Http\Controllers\ORMController::class,"one_to_one"]);
 
+
+Route::get("many_to_many",[App\Http\Controllers\ORMController::class,"many_to_many"]);
+

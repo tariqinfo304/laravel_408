@@ -94,6 +94,17 @@ class StdController extends Controller
         $std = Student::find($id);
 
         $std->name = $request->name ?? $std->name; 
+        /*
+        if($request->name)
+        {
+            $std->name = $request->name;
+        }
+        else
+        {
+            $std->name = $std->name;
+        }
+        
+        */
         $std->cnic = $request->cnic ?? $std->cnic; 
         $std->age = $request->age ?? $std->age; 
         $std->height = $request->height ?? $std->height; 
